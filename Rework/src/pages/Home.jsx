@@ -6,6 +6,7 @@ import { Navbar } from "../components/navbar.jsx";
 export function Home(){
     return(
         <>
+        <body>
         <Navbar />
         <div className='flex flex-col justify-center items-center mt-10'>
             <img className='w-72' src={Gordito} alt="" />
@@ -35,10 +36,10 @@ export function Home(){
                 </div>
             </div>
 
-            <div className='bg-[#39B7B5] w-full flex justify-center p-16' >
-                <button> registro <img src={boton} alt="" /> </button>
+            <div className='bg-[#39B7B5] w-full flex justify-center p-16 mt-8' >               <button> registro <img src={boton} alt="" /> </button>
             </div>
         </div>
+        </body>
         </>
     )
 }

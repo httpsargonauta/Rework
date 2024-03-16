@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    background-color: EDF4F4;
+
+}
 h1{
     font-size: 8vh;
     font-weight: bold;
