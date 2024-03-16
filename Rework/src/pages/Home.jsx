@@ -1,22 +1,19 @@
-import Gordito from "../assets/Home/Recurso6.png";
-import imgia from "../assets/Home/Recurso4.png";
-import boton from "../assets/Home/Recurso9.png";
+import Gordito from "../../src/assets/Registro-1/gordito.png";
+import imgia from "../assets/SVG/Recurso4.svg";
 import amari from "../assets/SVG/Recurso3.svg";
 import azul from "../assets/SVG/Recurso2.svg";
-import decora from "../assets/Home/Recurso7.png"
+import decora from "../assets/Home/Recurso7.png";
 import { Navbar } from "../components/navbar.jsx";
 
 export function Home() {
     return (
         <>
-            <body >
-            <Navbar />
-            <div className="relative z-[-10]">
+            <body>
+                <Navbar />
+                <div className="relative z-[-10]">
                     <img className="garabato" src={decora} alt="" />
                     <img src="" alt="" />
-
-                 </div>
-
+                </div>
 
                 <div className="flex flex-col justify-center items-center pt-20 ">
                     <img className="w-72" src={Gordito} alt="" />
@@ -64,14 +61,14 @@ export function Home() {
                     </div>
 
                     <div className="bg-[#39B7B5] w-full flex justify-center p-16 mt-8 ">
-                        {" "}
-                        <button className="relative">
-                            {" "}
-                            <p className="absolute top-3   left-14 text-3xl ">Registrate</p> <img src={boton} alt="" />{" "}
+                        <button className="relative w-[20rem] h-[4rem] bg-[#e9521d]">
+                            <p className="absolute top-3   left-14 text-3xl ">
+                                Registrate
+                            </p>
+                            <img src="" alt="" />
                         </button>
                     </div>
                 </div>
-
             </body>
         </>
     );

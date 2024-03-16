@@ -1,17 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-//import home from './App.jsx'
-import './index.css'
-import { Home } from './pages/Home.jsx'
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Register } from "./pages/register";
+import { Home } from "./pages/Home";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <Router>
     <Routes>
-      <Route path="/" element={<Home />} />
-
+      <Route exact path="/" Component={Home} />
+      <Route path="/register" Component={Register} />
     </Routes>
-    </BrowserRouter>
-  </React.StrictMode>,
-)
+  </Router>
+);

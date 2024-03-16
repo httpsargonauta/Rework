@@ -1,29 +1,69 @@
+import { CardEmply } from "../components/CardEmply";
+
 export const Register = () => {
   return (
-    <>
-    <section>
-      <img src="" alt="" />
-      <h2>Bienvenido</h2>
-      <h2>Profesionales en Remoto</h2>
+    <main
+      className="flex flex-col items-center w-full gap-4 h-screen bg-cover"
+      style={{
+        backgroundImage:
+          "url('src/assets/Registro-1/Recurso-registro  (1).png')",
+      }}
+    >
+      <section className="flex flex-col items-center justify-center gap-3 mt-12">
+        <img
+          src="src/assets/Registro-1/Recurso-registro  (3).png"
+          className="size-48"
+          alt="Remote Employed"
+        />
+        <h2 className="text-5xl font-semibold">Bienvenido!</h2>
+        <h2 className="bg-secondary px-2 py-1.5 font-semibold text-3xl text-white rounded-md">
+          Profesionales en Remoto
+        </h2>
+      </section>
 
-    </section>
-
-    <section>
-        <h3>Que estas buscando</h3>
-        <div>
-          <div>Empleo Remoto</div>
-          <div>Trabajadores</div>
+      <section className="mt-8 flex flex-col items-center gap-4">
+        <h3 className="text-2xl font-semibold text-tertiary">
+          Que estas buscando?
+        </h3>
+        <div className="flex gap-4">
+          <CardEmply>
+            <div className="flex flex-col items-center w-[142px] h-[140px]">
+              <img
+                src="src/assets/Registro-1/Recurso-registro  (2).svg"
+                className="size-28"
+                alt="Remote Employed"
+              />
+              <h3 className="text-xl font-medium  text-tertiary mt-2">
+                Empleo Remoto
+              </h3>
+            </div>
+          </CardEmply>
+          <CardEmply>
+            <div className="flex flex-col items-center w-[142px] h-[140px]">
+              <img
+                src="src/assets/Registro-1/Recurso-registro  (2).svg"
+                className="size-28"
+                alt="Remote Employed"
+              />
+              <h3 className="text-xl font-medium  text-tertiary mt-2">
+                Trabajadores
+              </h3>
+            </div>
+          </CardEmply>
         </div>
       </section>
-      
-      <section>
-        <form action="">
-          <input type="text" placeholder="Email" />
+
+      <section className="mt-12 flex flex-col items-center gap-4">
+        <form
+          className="flex flex-col gap-4"
+          action=""
+          onSubmit={(e) => e.preventDefault()}
+        >
+          <input type="text" placeholder="email" />
           <input type="text" placeholder="Contraseña" />
           <button type="submit">Inicia sesion</button>
         </form>
-    </section>
-    </>
-      
-  )
-}
+      </section>
+    </main>
+  );
+};
