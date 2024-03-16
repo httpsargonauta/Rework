@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-    background-color: #EDF4F4;
+    position: relative;
 
 }
 
@@ -21,11 +21,5 @@ button{
 h2{
     font-size: 3vh;
     font-weight: bold;
-
-}
-.garabato{
-    position: absolute;
-    top: 0;
-    right: 0;
 
 }

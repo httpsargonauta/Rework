@@ -1,7 +1,6 @@
-import menu from "../assets/menuh/menuhamburguesa.svg";
+import menu from "../../assets/menuh/menuhamburguesa.svg";
 
-
-export function Navbar ()  {
+export const Navbar = () =>  {
     return (
       <nav className="flex w-screen -mb-4 justify-between bg-background px-8 py-6 shadow-2xl z-10	">
         <div className="flex items-center justify-center">
@@ -16,5 +15,4 @@ export function Navbar ()  {
         </div>
       </nav>
     )
-  }
-    
+}
