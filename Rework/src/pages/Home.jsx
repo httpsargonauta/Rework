@@ -9,7 +9,7 @@ export function Home(){
         <Navbar />
         <div className='flex flex-col justify-center items-center mt-10'>
             <img className='w-72' src={Gordito} alt="" />
-            <h1>¡Bienvenido!</h1>
+            <h1>¡Bienvenidos!</h1>
             <button >Profesionales en Remoto</button>
             <p className='w-3/4	mt-10 mb-10 text-center	'>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, laudantium laborum. Voluptas reprehenderit nobis eligendi debitis, illum, molestias, minima quos corporis ipsa distinctio magni odio beatae deleniti quibusdam quaerat exercitationem.
