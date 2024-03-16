@@ -1,10 +1,8 @@
 import { Card } from "../components/card";
-import { Navbar } from "../components/navbar";
 
 export const Home = () => {
   return (
     <div className="flex flex-col gap-4 h-full flex-1 justify-center items-center">
-      <Navbar />
       <section className="flex flex-col gap-4 max-w-lg justify-center items-center">
         <Card
           title="Filtrado inicial por IA"
