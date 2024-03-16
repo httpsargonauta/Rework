@@ -1,6 +1,16 @@
+import { useState } from "react";
 import { CardEmply } from "../components/CardEmply";
 
 export const Register = () => {
+  const [type, setType] = useState("password");
+
+  const showPassword = () => {
+    if (type === "password") {
+      setType("text");
+    } else {
+      setType("password");
+    }
+  };
   return (
     <main
       className="flex flex-col items-center w-full gap-4 h-screen bg-cover"
@@ -59,8 +69,43 @@ export const Register = () => {
           action=""
           onSubmit={(e) => e.preventDefault()}
         >
-          <input type="text" placeholder="email" />
-          <input type="text" placeholder="Contraseña" />
+          <div className="flex items-center justify-start gap-2 bg-[#DBDBDB] px-4 py-2 rounded-lg">
+            <label htmlFor="email">
+              <img
+                src="src/assets/Registro-1/Recurso-registro  (4).svg"
+                alt=""
+                className="size-8"
+              />
+            </label>
+            <input
+              type="email"
+              placeholder="User or Email"
+              className="bg-transparent focus:outline-none text-md font-semibold text-tertiary text-start items-center justify-center"
+            />
+          </div>
+
+          <div className="flex items-center justify-start gap-2 bg-[#DBDBDB] px-4 py-2 rounded-lg">
+            <label htmlFor="email">
+              <img
+                src="src/assets/Registro-1/Recurso-registro  (4).svg"
+                alt=""
+                className="size-8"
+              />
+            </label>
+            <input
+              type={type}
+              placeholder="User or Email"
+              className="bg-transparent focus:outline-none text-md font-semibold text-tertiary text-start items-center justify-center flex-1"
+            />
+            <label htmlFor="email" onClick={showPassword}>
+              <img
+                src="src/assets/Registro-1/Recurso-registro  (4).svg"
+                alt=""
+                className="size-8"
+              />
+            </label>
+          </div>
+
           <button type="submit">Inicia sesion</button>
         </form>
       </section>
