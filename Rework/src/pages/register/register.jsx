@@ -1,4 +1,4 @@
-import { CardEmply } from "../components/CardEmply";
+import { CardEmply } from "../../components/cardEmply/CardEmply";
 
 export const Register = () => {
   return (
