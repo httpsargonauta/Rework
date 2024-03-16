@@ -1,4 +1,4 @@
-import menu from '../assets/menuhamburguesa.svg'
+import menu from "../assets/menuh/menuhamburguesa.svg";
 
 
 export function Navbar ()  {

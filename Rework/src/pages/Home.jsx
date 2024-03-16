@@ -13,7 +13,7 @@ export function Home() {
             <body className="relative overflow-hidden	" >
             <Navbar />
             <img className="garabato absolute -z-10 top-40 -right-20 " src={decora} alt="" />
-                    <img className=" absolute -z-10 top-[50%] -left-[200px]" src={decorama} alt="" />
+                    <img className=" absolute -z-10 top-[50%] -left-[150px]" src={decorama} alt="" />
    
 
 
