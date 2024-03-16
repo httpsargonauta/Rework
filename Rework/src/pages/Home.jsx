@@ -4,18 +4,17 @@ import boton from "../assets/Home/Recurso9.png";
 import amari from "../assets/SVG/Recurso3.svg";
 import azul from "../assets/SVG/Recurso2.svg";
 import decora from "../assets/Home/Recurso7.png"
+import decorama from "../assets/Home/Recurso8.png"
 import { Navbar } from "../components/navbar.jsx";
 
 export function Home() {
     return (
         <>
-            <body >
+            <body className="relative overflow-hidden	" >
             <Navbar />
-            <div className="relative z-[-10]">
-                    <img className="garabato" src={decora} alt="" />
-                    <img src="" alt="" />
-
-                 </div>
+            <img className="garabato absolute -z-10 top-40 -right-20 " src={decora} alt="" />
+                    <img className=" absolute -z-10 top-[50%] -left-[200px]" src={decorama} alt="" />
+   
 
 
                 <div className="flex flex-col justify-center items-center pt-20 ">
