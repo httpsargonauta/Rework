@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1{
+    font-size: 8vh;
+    font-weight: bold;
+}
+button{
+    background-color: #E9521D;
+    padding: 10px 25px;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+h2{
+    font-size: 3vh;
+    font-weight: bold;
+
+}
