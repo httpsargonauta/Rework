@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    background-color: EDF4F4;
+body{
+    background-color: #EDF4F4;
 
 }
+
 h1{
     font-size: 8vh;
     font-weight: bold;
@@ -20,5 +21,11 @@ button{
 h2{
     font-size: 3vh;
     font-weight: bold;
+
+}
+.garabato{
+    position: absolute;
+    top: 0;
+    right: 0;
 
 }
