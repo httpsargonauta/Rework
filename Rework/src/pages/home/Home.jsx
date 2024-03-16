@@ -2,8 +2,10 @@ import Gordito from "../../../src/assets/Registro-1/gordito.png";
 import imgia from "../../assets/SVG/Recurso4.svg";
 import amari from "../../assets/SVG/Recurso3.svg";
 import azul from "../../assets/SVG/Recurso2.svg";
+import decora from "../../assets/Home/Recurso7.png"
+import decorama from "../../assets/Home/Recurso8.png"
 import { home } from "./home.data";
-import { Navbar } from "../../components/navbar/navbar";
+import {Navbar} from '../../components/navbar/Navbar'
 
 export function Home() {
     const returnImage = (image) => {
@@ -14,12 +16,10 @@ export function Home() {
 
     return (
         <>
-            <body>
+            <body className="relative overflow-hidden	" >
                 <Navbar/>
-                <div className="relative z-[-10]">
-                    <img className="garabato" src="" alt="" />
-                    <img src="" alt="" />
-                </div>
+                <img className="garabato absolute -z-10 top-40 -right-20 " src={decora} alt="" />
+                    <img className=" absolute -z-10 top-[50%] -left-[150px]" src={decorama} alt="" />
 
                 <div className="flex flex-col justify-center items-center pt-20 ">
                     <img className="w-72" src={Gordito} alt="" />
