@@ -1,12 +1,13 @@
-import '../styles/Home.css';
 import Gordito from '../assets/Home/Recurso6.png'
 import imgia from '../assets/Home/Recurso4.png'
 import boton from '../assets/Home/Recurso9.png'
+import { Navbar } from "../components/navbar.jsx";
 
 export function Home(){
     return(
         <>
-        <div className='flex flex-col justify-center items-center '>
+        <Navbar />
+        <div className='flex flex-col justify-center items-center mt-10'>
             <img className='w-72' src={Gordito} alt="" />
             <h1>¡Bienvenido!</h1>
             <button >Profesionales en Remoto</button>
