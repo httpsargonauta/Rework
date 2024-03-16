@@ -1,6 +1,6 @@
 import { Card } from "../components/card";
 
-export const Home = () => {
+export const App = () => {
   return (
     <div className="flex flex-col gap-4 h-full flex-1 justify-center items-center">
       <section className="flex flex-col gap-4 max-w-lg justify-center items-center">
