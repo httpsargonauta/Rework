@@ -1,0 +1,49 @@
+/* Celeste */
+.celest-color {
+    color: #39B7B5;
+}
+
+/* Azul oscuro */
+.dark-blue-color {
+    color: #192E4D;
+}
+
+/* Naranja */
+.orange-color {
+    color: #E9521D;
+}
+
+/* Amarillo */
+.yellow-color {
+    color: #F4B313;
+}
+
+/* Background / Blanco */
+.background-color {
+    background-color: #EDF4F4;
+}
+
+/* Gris Claro */
+.light-gray-color {
+    color: #DBDBDB;
+}
+
+/* Gris Oscuro / Hora y Fecha */
+.dark-gray-color {
+    color: #575656;
+}
+
+/* Naranja Claro */
+.light-orange-color {
+    color: #F2A378;
+}
+
+/* Azul Claro */
+.light-blue-color {
+    color: #75C5C3;
+}
+
+/* Textos / Negro */
+.text-color {
+    color: #1D1D1B;
+}

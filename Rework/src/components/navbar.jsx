@@ -1,4 +1,3 @@
-import React from "react";
 import menu from '../assets/menuhamburguesa.svg'
 
 
@@ -15,7 +14,7 @@ export function Navbar ()  {
             <img src={menu} alt="Menu hamburguesa cursor-pointer" className="size-16" />
           </div>
         </div>
-     </nav>
+      </nav>
     )
   }
     
