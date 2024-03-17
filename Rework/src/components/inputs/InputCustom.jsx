@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {userIcon, passwordIcon, folderEmploye} from "../icons/icons";
+import {userIcon, passwordIcon, folderIcon,locationIcon,calendarIcon,desriptionIcon,suitcaseIcon,payIcon,clockIcon} from "../icons/icons";
 import PropTypes from "prop-types";
 
 export const InputCustom = ({placeholder, label, type, firstIcon, secondIcon, startIcon, endIcon}) => {
@@ -13,8 +13,13 @@ export const InputCustom = ({placeholder, label, type, firstIcon, secondIcon, st
     const setImage = (img) => {
         if(img == 'userIcon') return <img src={userIcon} alt="" className="size-8" />
         if(img == 'passwordIcon') return <img src={passwordIcon} alt="" className="size-8" onClick={changeIcon}/>
-        if(img == 'folderEmploye') return <img src={folderEmploye} alt="" className="size-8" />
-
+        if(img == 'folderEmploye') return <img src={folderIcon} alt="" className="size-8" />
+        if(img == 'locationIcon') return <img src={locationIcon} className="size-8"/>
+        if(img == 'calendarIcon') return <img src={calendarIcon} className="size-8"/>
+        if(img == 'desriptionIcon') return <img src={desriptionIcon} className="size-8"/>
+        if(img == 'suitcaseIcon') return <img src={suitcaseIcon} className="size-8"/>
+        if(img == 'payIcon') return <img src={payIcon} className="size-8"/>
+        if(img == 'clockIcon') return <img src={clockIcon} className="size-8"/>
     }
 
     return (
