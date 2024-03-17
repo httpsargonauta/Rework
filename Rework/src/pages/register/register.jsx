@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { CardEmply } from "../../components/cardEmply/CardEmply";
 import woman from "../../assets/Registro-empresas/Imagendemujer-icon.png";
 import employe from "../../assets/Registro-empleados/Recurso-registro-empleado.png";
@@ -11,15 +10,6 @@ import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
 import { InputCustom } from "../../components/inputs/InputCustom";
 export const Register = () => {
-  const [type, setType] = useState("password");
-
-  const showPassword = () => {
-    if (type === "password") {
-      setType("text");
-    } else {
-      setType("password");
-    }
-  };
   return (
     <>
       <Navbar />
@@ -79,10 +69,8 @@ export const Register = () => {
             <InputCustom 
               label={"Email"} 
               placeholder={"User or Email"} 
-              type={type} 
               firstIcon={"passwordIcon"}
               secondIcon={"passwordIcon"}
-              change={showPassword}
               startIcon={true}
               endIcon={true}
             ></InputCustom>

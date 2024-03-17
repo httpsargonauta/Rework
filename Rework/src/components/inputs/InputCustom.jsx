@@ -1,10 +1,13 @@
+import { useState } from "react";
 import {userIcon, passwordIcon, folderEmploye} from "../icons/icons";
 import PropTypes from "prop-types";
 
-export const InputCustom = ({placeholder, label, type, firstIcon, secondIcon, startIcon, endIcon, change}) => {
+export const InputCustom = ({placeholder, label, type, firstIcon, secondIcon, startIcon, endIcon}) => {
+    const [typeText, setTypeText] = useState("password");
 
     const changeIcon = () => {
-        change()
+        const pass = typeText == "password" ? "text" : "password"
+        setTypeText(pass);
     }
 
     const setImage = (img) => {
@@ -20,7 +23,7 @@ export const InputCustom = ({placeholder, label, type, firstIcon, secondIcon, st
                 {startIcon && (setImage(firstIcon))}
             </label>
             <input
-                type={type}
+                type={type ? type : typeText}
                 placeholder={placeholder}
                 className="bg-transparent focus:outline-none text-md font-semibold text-tertiary text-start items-center justify-center flex-1"
             />
