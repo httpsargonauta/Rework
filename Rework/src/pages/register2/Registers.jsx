@@ -5,15 +5,11 @@ import decora from "../../assets/Home/Recurso7.png"
 import decorama from "../../assets/Home/Recurso8.png"
 import {InputCustom} from '../../components/inputs/InputCustom'
 export function Registers() {
-
-  
   return (
-
     <>
       <Navbar />
       <img className="garabato absolute -z-10 top-40 -right-20 " src={decora} alt="" />
       <img className=" absolute -z-10 top-[50%] -left-[150px]" src={decorama} alt="" />
-
       <div className="flex flex-col justify-center items-center pt-20 ">
         <img className="w-80" src={jobs} alt="" />
         <h1 className="mb-10">¡Bienvenidos!</h1>

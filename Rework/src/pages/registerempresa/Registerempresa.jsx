@@ -3,7 +3,7 @@ import { Footer } from "../../components/footer/Footer";
 import senora from "../../assets/Registro-empresas/Imagendemujer-icon.png";
 import { InputCustom } from "../../components/inputs/InputCustom";
 import garabatoAzul from "../../assets/Registro-1/garbatoazul.png"
-
+import {inputs} from './registerempresa.data'
 export function Registersempresa() {
   return (
     <>
@@ -19,46 +19,18 @@ export function Registersempresa() {
       <section className="mt-12 flex flex-col items-center gap-4">
         <form className="flex flex-col gap-4">
 
-          <InputCustom 
-              label={"email"} 
-              placeholder={"User or Email"} 
-              firstIcon={"userIcon"}
-              startIcon={true}
-              endIcon={false}
+        {inputs.map((input, key) => (
+            <InputCustom
+              key={key}
+              label={input.label}
+              type={input.type}
+              placeholder={input.placeholder}
+              firstIcon={input.firstIcon}
+              startIcon={input.startIcon}
+              secondIcon={input.secondIcon}
+              endIcon={input.endIcon}
             ></InputCustom>
-
-          <InputCustom 
-              label={"password"} 
-              placeholder={"Password"} 
-              firstIcon={"passwordIcon"}
-              secondIcon={"passwordIcon"}
-              startIcon={true}
-              endIcon={true}
-            ></InputCustom>
-          <InputCustom 
-              label={"password"} 
-              placeholder={"Password"} 
-              firstIcon={"passwordIcon"}
-              secondIcon={"passwordIcon"}
-              startIcon={true}
-              endIcon={true}
-            ></InputCustom>
-          <InputCustom 
-              label={"password"} 
-              placeholder={"Password"} 
-              firstIcon={"passwordIcon"}
-              secondIcon={"passwordIcon"}
-              startIcon={true}
-              endIcon={true}
-            ></InputCustom>
-          <InputCustom 
-              label={"password"} 
-              placeholder={"Password"} 
-              firstIcon={"passwordIcon"}
-              secondIcon={"passwordIcon"}
-              startIcon={true}
-              endIcon={true}
-            ></InputCustom>
+          ))}
           <button className="bg-[#75C5C3]" >Registrate</button>
         </form>
       </section>

@@ -1,8 +1,22 @@
 import { useState } from "react";
-import {userIcon, passwordIcon, folderIcon,locationIcon,calendarIcon,desriptionIcon,suitcaseIcon,payIcon,clockIcon} from "../icons/icons";
+import {
+    userIcon,
+    passwordIcon,
+    folderIcon,
+    locationIcon,
+    calendarIcon,
+    desriptionIcon,
+    suitcaseIcon,
+    payIcon,
+    clockIcon,
+    phoneIcon,
+    emailIcon,
+    enterpriseIcon
+} from "../icons/icons";
 import PropTypes from "prop-types";
 
-export const InputCustom = ({placeholder, label, type, firstIcon, secondIcon, startIcon, endIcon}) => {
+export const InputCustom = ({placeholder,
+     label, type, firstIcon, secondIcon, startIcon, endIcon}) => {
     const [typeText, setTypeText] = useState("password");
 
     const changeIcon = () => {
@@ -20,6 +34,9 @@ export const InputCustom = ({placeholder, label, type, firstIcon, secondIcon, st
         if(img == 'suitcaseIcon') return <img src={suitcaseIcon} className="size-8"/>
         if(img == 'payIcon') return <img src={payIcon} className="size-8"/>
         if(img == 'clockIcon') return <img src={clockIcon} className="size-8"/>
+        if(img == 'phoneIcon') return <img src={phoneIcon} className="size-8"/>
+        if(img == 'emailIcon') return <img src={emailIcon} className="size-8"/>
+        if(img == 'enterpriseIcon') return <img src={enterpriseIcon} className="size-8"/>
     }
 
     return (
