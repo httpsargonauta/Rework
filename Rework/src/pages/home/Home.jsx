@@ -5,7 +5,8 @@ import azul from "../../assets/SVG/Recurso2.svg";
 import decora from "../../assets/Home/Recurso7.png"
 import decorama from "../../assets/Home/Recurso8.png"
 import { home } from "./home.data";
-import {Navbar} from '../../components/navbar/Navbar'
+import {Navbar} from '../../components/navbar/Navbar';
+import { Footer } from '../../components/footer/Footer';
 
 export function Home() {
     const returnImage = (image) => {
@@ -33,7 +34,7 @@ export function Home() {
                     </p>
                     <div className="flex flex-col justify-center items-center gap-10">
                         {home.map((card) => (
-                            <div key={card.title} className="flex flex-col justify-center items-center bg-[#192E4D] w-[25rem] p-10 gap-5 rounded-[15px]">
+                            <div key={card.title} className="flex text-center flex-col justify-center items-center bg-[#192E4D] w-[25rem] p-10 gap-5 rounded-[15px]">
                                 {returnImage(card.img)}
                                 <h2 className={card.color}>{card.title}</h2>
                                 <p className="text-center text-white">
@@ -43,7 +44,7 @@ export function Home() {
                         ))}
                     </div>
 
-                    <div className="bg-[#39B7B5] w-full flex justify-center p-16 mt-8 ">
+                    <div className="bg-[#39B7B5] w-full flex justify-center p-16 mt-8 mb-8 ">
                         <button className="relative w-[20rem] h-[4rem] bg-[#e9521d]">
                             <p className="absolute top-3   left-14 text-3xl ">
                                 Registrate
@@ -52,6 +53,8 @@ export function Home() {
                         </button>
                     </div>
                 </div>
+
+                <Footer />
             </body>
         </>
     );
