@@ -3,7 +3,8 @@ import { Footer } from "../../components/footer/Footer";
 import senora from "../../assets/Registro-empresas/Imagendemujer-icon.png";
 import { InputCustom } from "../../components/inputs/InputCustom";
 import garabatoAzul from "../../assets/Registro-1/garbatoazul.png"
-import {inputs} from './registerempresa.data'
+import {inputs} from './registerempresa.data';
+
 export function Registersempresa() {
   return (
     <>

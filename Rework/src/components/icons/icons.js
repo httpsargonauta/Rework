@@ -10,6 +10,7 @@ import clockIcon from "../../assets/publicatuOfertaDeEmpleo/reloj-icon.svg"
 import phoneIcon from "../../assets/Registro-empresas/telefono-icon.svg"
 import emailIcon from "../../assets/Registro-empresas/correo-icon.svg"
 import enterpriseIcon from "../../assets/Registro-empresas/empresa-icon.svg"
+import eyeIcon from "../../assets/Registro-1/Ojo.svg";
 
 export {
     userIcon,
@@ -23,5 +24,6 @@ export {
     clockIcon,
     phoneIcon,
 emailIcon,
-enterpriseIcon
+enterpriseIcon,
+eyeIcon
 }

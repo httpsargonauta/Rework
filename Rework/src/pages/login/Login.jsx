@@ -9,7 +9,37 @@ import gordito from "../../assets/Registro-1/gordito.png";
 import { Navbar } from "../../components/navbar/Navbar";
 import { Footer } from "../../components/footer/Footer";
 import { InputCustom } from "../../components/inputs/InputCustom";
-export const Register = () => {
+
+import { useFormik } from "formik";
+import { postDataApi } from "../../env/backend";
+import { useNavigate } from "react-router-dom";
+
+export const Login = () => {
+  const navigate = useNavigate();
+
+  const getChange = (data, name) => {
+    formik.values[name] = data;
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
+    },
+    onSubmit: (values) => registerApi(values),
+  });
+
+  const registerApi = (data) => {
+    postDataApi('/auth/login', data).then((response) => {
+      if(response.success == true){
+        navigate('/Creatuperfil')
+      } else {
+        console.log(response);
+      }
+    })
+  };
+
+
   return (
     <>
       <Navbar />
@@ -56,10 +86,12 @@ export const Register = () => {
         </section>
 
         <section className="mt-12 flex flex-col items-center gap-4">
-          <form className="flex flex-col gap-4" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col gap-4" onSubmit={formik.handleSubmit}>
             <InputCustom 
               label={"Email"} 
-              placeholder={"User or Email"} 
+              placeholder={"Usuario"} 
+              name={"username"}
+              onChangeInput={getChange}
               type={"text"} 
               firstIcon={"userIcon"}
               startIcon={true}
@@ -68,9 +100,11 @@ export const Register = () => {
 
             <InputCustom 
               label={"Email"} 
-              placeholder={"User or Email"} 
+              placeholder={"Contraseña"} 
+              name={"password"}
+              onChangeInput={getChange}
               firstIcon={"passwordIcon"}
-              secondIcon={"passwordIcon"}
+              secondIcon={"eyeIcon"}
               startIcon={true}
               endIcon={true}
             ></InputCustom>
