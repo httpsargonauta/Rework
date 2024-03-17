@@ -1,6 +1,7 @@
 export const inputs = [
     {
         label: 'enterprise',
+        name: 'username',
         type: 'text',
         placeholder: 'Nombre de la empresa',
         firstIcon: 'enterpriseIcon',
@@ -9,6 +10,7 @@ export const inputs = [
     },
     {
         label: 'location',
+        name: 'country',
         type: 'text',
         placeholder: 'Ubicación',
         firstIcon: 'locationIcon',
@@ -17,14 +19,16 @@ export const inputs = [
     },
     {
         label: 'suitcase',
+        name: 'area',
         type: 'text',
-        placeholder: 'Ocupación',
+        placeholder: 'Area',
         firstIcon: 'suitcaseIcon',
         startIcon: true,
         endIcon: false,
     },
     {
         label: 'email',
+        name: 'email',
         type: 'text',
         placeholder: 'Correo electronico',
         firstIcon: 'emailIcon',
@@ -33,6 +37,7 @@ export const inputs = [
     },
     {
         label: 'phone',
+        name: 'phone',
         type: 'text',
         placeholder: 'Número telefónico',
         firstIcon: 'phoneIcon',
@@ -41,6 +46,7 @@ export const inputs = [
     },
     {
         label: 'password',
+        name: 'password',
         placeholder: 'Contraseña',
         firstIcon: 'passwordIcon',
         secondIcon: 'eyeIcon',

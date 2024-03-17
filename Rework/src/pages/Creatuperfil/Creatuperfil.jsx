@@ -5,8 +5,33 @@ import garabatoAzul from "../../assets/Registro-1/garbatoazul.png"
 import decora from "../../assets/Home/Recurso7.png"
 import { inputs } from "./creatuperfil.data";
 import { InputCustom } from "../../components/inputs/InputCustom";
+import { useFormik } from "formik";
+import { postDataApi } from "../../env/backend";
 
 export function Creatuperfil() {
+  const getChange = (data, name) => {
+    formik.values[name] = data;
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      fullName: '',
+      country: '',
+      ocupation: '',
+      description: '',
+      skills: '',
+      experience: ''
+    },
+    onSubmit: (values) => registerApi(values),
+  });
+
+  const registerApi = (data) => {
+    console.log(data);
+    // postDataApi('/auth /register', data).then((response) => {
+    //   console.log(response);
+    // })
+  };
+
   return (
     <>
       <Navbar />
@@ -18,20 +43,22 @@ export function Creatuperfil() {
 
       </div>
       <section className="mt-12 flex flex-col items-center gap-4">
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={formik.handleSubmit}>
 
           {inputs.map((input, key) => (
             <InputCustom
               key={key}
               label={input.label}
               type={input.type}
+              name={input.name}
+              onChangeInput={getChange}
               placeholder={input.placeholder}
               firstIcon={input.firstIcon}
               startIcon={input.startIcon}
               endIcon={input.endIcon}
             ></InputCustom>
           ))}
-          <button className="bg-[#75C5C3]" >Registrate</button>
+          <button className="bg-[#75C5C3]" >Guardar información</button>
         </form>
       </section>
       <Footer />
