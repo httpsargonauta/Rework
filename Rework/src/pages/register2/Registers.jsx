@@ -3,8 +3,22 @@ import { Footer } from "../../components/footer/Footer";
 import jobs from "../../assets/Registro-1/Job-icon.svg";
 import decora from "../../assets/Home/Recurso7.png"
 import decorama from "../../assets/Home/Recurso8.png"
-import {InputCustom} from '../../components/inputs/InputCustom'
+import {InputCustom} from '../../components/inputs/InputCustom';
+import { useFormik } from "formik";
 export function Registers() {
+
+  const formik = useFormik({
+    initialValues: {
+      user: '',
+      pasword: ''
+    },
+    onSubmit: (values) => registerApi(values)
+  });
+
+  const registerApi = (data) => {
+      console.log(data);
+  }
+  
   return (
     <>
       <Navbar />
@@ -18,7 +32,7 @@ export function Registers() {
       </div>
 
       <section className="mt-12 flex flex-col items-center gap-4">
-        <form className="flex flex-col gap-4">
+        <form className="flex flex-col gap-4" onSubmit={formik.handleSubmit}>
           <InputCustom 
               label={"Email"} 
               placeholder={"User or Email"} 
