@@ -7,6 +7,8 @@ import { Registers } from "./pages/register2/Registers";
 import { Creatuperfil } from "./pages/Creatuperfil/Creatuperfil";
 import { Registersempresa } from "./pages/registerempresa/Registerempresa";
 import { Creatuoferta } from "./pages/Creatuoferta/Creatuoferta";
+import { Presentacionem } from "./pages/PresentacionEmpleado/PresentacionEm";
+import { Perfilempresa } from "./pages/perfilempresa/perfilempresa";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
@@ -17,6 +19,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/Creatuperfil" element={<Creatuperfil />} />
       <Route path="/registoempresa" element={<Registersempresa />} />
       <Route path="/creatuoferta" element={<Creatuoferta />} />
+      <Route path="/Presentacionem" element={<Presentacionem />} />
+      <Route path="/perfilempresa" element={<Perfilempresa />} />
     </Routes>
   </Router>
 );

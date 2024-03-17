@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+    font-family: 'fuente';
+    src: url('./assets/Tipografias/Canada.otf') format('woff2'),
+         url('./assets/Tipografias/mollen/Mollen\ Personal\ Use-Bold.otf') format('woff'),
+         url('./assets/Tipografias/mollen/Mollen\ Personal\ Use-Regular.otf') format('woff3');
+    font-weight: normal;
+    font-style: normal;
+  }
 body{
     position: relative;
+    font-family: 'fuente', sans-serif;
 
 }
 
@@ -22,4 +32,8 @@ h2{
     font-size: 3vh;
     font-weight: bold;
 
+}
+h3{
+    font-weight: bold;
+    font-size: 2vh;
 }
