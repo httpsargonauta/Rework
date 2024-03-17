@@ -7,6 +7,9 @@ import desriptionIcon from "../../assets/publicatuOfertaDeEmpleo/descripcion-ico
 import suitcaseIcon from "../../assets/publicatuOfertaDeEmpleo/maletin-icon.svg"
 import payIcon from "../../assets/publicatuOfertaDeEmpleo/salario-icon.svg"
 import clockIcon from "../../assets/publicatuOfertaDeEmpleo/reloj-icon.svg"
+import phoneIcon from "../../assets/Registro-empresas/telefono-icon.svg"
+import emailIcon from "../../assets/Registro-empresas/correo-icon.svg"
+import enterpriseIcon from "../../assets/Registro-empresas/empresa-icon.svg"
 
 export {
     userIcon,
@@ -17,5 +20,8 @@ export {
     desriptionIcon,
     suitcaseIcon,
     payIcon,
-    clockIcon
+    clockIcon,
+    phoneIcon,
+emailIcon,
+enterpriseIcon
 }
