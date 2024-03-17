@@ -11,12 +11,21 @@ import {
     clockIcon,
     phoneIcon,
     emailIcon,
-    enterpriseIcon
+    enterpriseIcon,
+    eyeIcon
 } from "../icons/icons";
 import PropTypes from "prop-types";
 
-export const InputCustom = ({placeholder,
-     label, type, firstIcon, secondIcon, startIcon, endIcon}) => {
+export const InputCustom = ({
+    placeholder,
+    name,
+    onChangeInput,
+    label, 
+    type, 
+    firstIcon, 
+    secondIcon, 
+    startIcon, 
+    endIcon}) => {
     const [typeText, setTypeText] = useState("password");
 
     const changeIcon = () => {
@@ -26,7 +35,7 @@ export const InputCustom = ({placeholder,
 
     const setImage = (img) => {
         if(img == 'userIcon') return <img src={userIcon} alt="" className="size-8" />
-        if(img == 'passwordIcon') return <img src={passwordIcon} alt="" className="size-8" onClick={changeIcon}/>
+        if(img == 'passwordIcon') return <img src={passwordIcon} alt="" className="size-8"/>
         if(img == 'folderEmploye') return <img src={folderIcon} alt="" className="size-8" />
         if(img == 'locationIcon') return <img src={locationIcon} className="size-8"/>
         if(img == 'calendarIcon') return <img src={calendarIcon} className="size-8"/>
@@ -37,6 +46,7 @@ export const InputCustom = ({placeholder,
         if(img == 'phoneIcon') return <img src={phoneIcon} className="size-8"/>
         if(img == 'emailIcon') return <img src={emailIcon} className="size-8"/>
         if(img == 'enterpriseIcon') return <img src={enterpriseIcon} className="size-8"/>
+        if(img == 'eyeIcon') return <img src={eyeIcon} className="size-8" onClick={changeIcon}/>
     }
 
     return (
@@ -45,6 +55,8 @@ export const InputCustom = ({placeholder,
                 {startIcon && (setImage(firstIcon))}
             </label>
             <input
+                name={name}
+                onChange={(e) => onChangeInput(e.target.value, name)}
                 type={type ? type : typeText}
                 placeholder={placeholder}
                 className="bg-transparent focus:outline-none text-md font-semibold text-tertiary text-start items-center justify-center flex-1"
@@ -62,6 +74,8 @@ InputCustom.propTypes  = {
     type: PropTypes.string = 'text',
     firstIcon: PropTypes.string,
     secondIcon: PropTypes.string,
+    name: PropTypes.string,
+    onChangeInput: PropTypes.func,
     startIcon: PropTypes.bool = false,
     endIcon: PropTypes.bool = false,
 }

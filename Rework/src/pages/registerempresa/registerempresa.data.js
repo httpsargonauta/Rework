@@ -43,7 +43,7 @@ export const inputs = [
         label: 'password',
         placeholder: 'Contraseña',
         firstIcon: 'passwordIcon',
-        secondIcon: 'passwordIcon',
+        secondIcon: 'eyeIcon',
         startIcon: true,
         endIcon: true,
     },
