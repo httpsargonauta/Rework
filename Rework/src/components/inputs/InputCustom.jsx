@@ -47,5 +47,4 @@ InputCustom.propTypes  = {
     secondIcon: PropTypes.string,
     startIcon: PropTypes.bool = false,
     endIcon: PropTypes.bool = false,
-    change: PropTypes.func,
 }
