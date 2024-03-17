@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { CardEmply } from "../../components/cardEmply/CardEmply";
-import woman from "../../assets/Registro-empresas/Imagen de mujer - icon.png";
+import woman from "../../assets/Registro-empresas/Imagendemujer-icon.png";
 import employe from "../../assets/Registro-empleados/Recurso-registro-empleado.png";
 import userEmploye from "../../assets/Registro-empleados/user-icon-registro-empleados.svg"
 import password from "../../assets/Registro-empleados/candado-icon-registro-empleados.svg"
+import decora from "../../assets/Home/Recurso7.png"
+import decorama from "../../assets/Home/Recurso8.png"
+import garabatoAzul from "../../assets/Registro-1/garbatoazul.png"
 
 import gordito from "../../assets/Registro-1/gordito.png"
+import { Navbar } from "../../components/navbar/Navbar";
+import { Footer } from "../../components/footer/Footer";
 export const Register = () => {
   const [type, setType] = useState("password");
 
@@ -17,8 +22,14 @@ export const Register = () => {
     }
   };
   return (
+    <>
+    <Navbar/>
+
+    <img className="garabato absolute -z-10 top-40 -right-20 " src={decora} alt="" />
+    <img className=" absolute -z-20 top-[50%] -left-[150px]" src={garabatoAzul} alt="" />
+
     <main
-      className="flex flex-col items-center w-full gap-4 h-screen bg-cover"
+      className="flex z-10 flex-col items-center w-full gap-4 h-screen bg-cover"
       style={{
         backgroundImage:
           "url('src/assets/Registro-1/Recurso-registro  (1).png')",
@@ -42,13 +53,13 @@ export const Register = () => {
         </h3>
         <div className="flex gap-4">
           <CardEmply>
-            <div className="flex flex-col items-center w-[142px] h-[140px]">
+            <div className="z-10 flex flex-col items-center w-[142px] h-[140px]">
               <img
                 src={employe}
                 className="size-28"
                 alt="Remote Employed"
               />
-              <h3 className="text-xl font-medium  text-tertiary mt-2">
+              <h3 className="text-xl font-medium z-10 text-tertiary mt-2">
                 Empleo Remoto
               </h3>
             </div>
@@ -115,5 +126,8 @@ export const Register = () => {
         </form>
       </section>
     </main>
+    <Footer />
+
+    </>
   );
 };
