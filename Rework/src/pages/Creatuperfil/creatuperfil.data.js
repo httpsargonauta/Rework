@@ -2,7 +2,8 @@ export const inputs = [
     {
         label: 'user',
         type: 'text',
-        placeholder: 'Diseñador gráfico creativo',
+        name: 'fullName',
+        placeholder: 'Nombre completo',
         firstIcon: 'userIcon',
         startIcon: true,
         endIcon: false,
@@ -10,6 +11,7 @@ export const inputs = [
     {
         label: 'location',
         type: 'text',
+        name: 'country',
         placeholder: 'Ubicación',
         firstIcon: 'locationIcon',
         startIcon: true,
@@ -18,6 +20,7 @@ export const inputs = [
     {
         label: 'suitcase',
         type: 'text',
+        name: 'ocupation',
         placeholder: 'Ocupación',
         firstIcon: 'suitcaseIcon',
         startIcon: true,
@@ -26,7 +29,26 @@ export const inputs = [
     {
         label: 'desription',
         type: 'text',
+        name: 'description',
         placeholder: 'Descripción',
+        firstIcon: 'desriptionIcon',
+        startIcon: true,
+        endIcon: false,
+    },
+    {
+        label: 'habilidades',
+        type: 'text',
+        name: 'skills',
+        placeholder: 'Habilidades',
+        firstIcon: 'desriptionIcon',
+        startIcon: true,
+        endIcon: false,
+    },
+    {
+        label: 'experience',
+        type: 'text',
+        name: 'experience',
+        placeholder: 'Experiencia laboral',
         firstIcon: 'desriptionIcon',
         startIcon: true,
         endIcon: false,

@@ -32,6 +32,7 @@ export const Login = () => {
   const registerApi = (data) => {
     postDataApi('/auth/login', data).then((response) => {
       if(response.success == true){
+        localStorage.setItem('userData', response.data)
         if(response.data.isEmploye == 'Empresa'){
           navigate('/')
         } else {
