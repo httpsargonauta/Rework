@@ -31,8 +31,27 @@ export function Perfilempresa(){
 
 
           <div>
-            <div>
-                <img className="w-80 mb-10" src={senora} alt="" />
+            <div className="flex flex-row items-center gap-4 shadow-gray-600">
+                <img className="w-40 mb-10" src={senora} alt="" />
+                <div>
+                    <h2>Diseñador grafico creativo</h2>
+                    <h3>nombre de la empresa</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <div className="flex">
+                    <p className="w-2/5 py-2 bg-[#F2A378] text-center rounded-lg	">Adove</p>
+                    <p className="w-2/5 py-2 bg-[#F2A378] text-center rounded-lg	">Adove</p>
+                    <p className="w-2/5 py-2 bg-[#F2A378] text-center rounded-lg	">Adove</p>
+                    </div>
+                </div>
+                <div>
+                    <h2> <p className="w-2/5 py-2 bg-[#F2A378] text-center rounded-lg	">2.000$</p></h2>
+                    <p>Oferta Activa:</p>
+                    <p>Quedan 2 horas </p>
+                    <p>Hora: 2pm 3pm</p>
+                
+
+
+                </div>
             </div>
             <div></div>
             <div></div>
