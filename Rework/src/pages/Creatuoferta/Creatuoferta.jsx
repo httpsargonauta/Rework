@@ -89,7 +89,7 @@ export function Creatuoferta(){
  
           </div>
 
-          <button className="bg-[#75C5C3]" >Registrate</button>
+          <button className="bg-[#75C5C3]" >Publica tu oferta</button>
 
          
         </form>
