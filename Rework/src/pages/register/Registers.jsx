@@ -22,7 +22,7 @@ export function Registers() {
   });
 
   const registerApi = (data) => {
-    data.rolId = false
+    data.isEmploye = true
     postDataApi('/auth/register', data).then((response) => {
       console.log(response);
     })

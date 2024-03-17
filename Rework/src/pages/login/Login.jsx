@@ -32,7 +32,11 @@ export const Login = () => {
   const registerApi = (data) => {
     postDataApi('/auth/login', data).then((response) => {
       if(response.success == true){
-        navigate('/Creatuperfil')
+        if(response.data.isEmploye == 'Empresa'){
+          navigate('/')
+        } else {
+          navigate('/Creatuperfil')
+        }
       } else {
         console.log(response);
       }
