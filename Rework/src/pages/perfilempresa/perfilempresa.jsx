@@ -122,7 +122,7 @@ export function Perfilempresa(){
    
           </div>
 
-            </div>
+        </div>
 
             
 

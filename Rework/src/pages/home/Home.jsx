@@ -7,8 +7,15 @@ import decorama from "../../assets/Home/Recurso8.png"
 import { home } from "./home.data";
 import {Navbar} from '../../components/navbar/Navbar';
 import { Footer } from '../../components/footer/Footer';
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
+const navigate = useNavigate();
+
+const redirectToRegister =() => {
+    navigate('/registers');
+}
+
     const returnImage = (image) => {
         if(image == 'circuito') return <img className="w-20" src={imgia} alt="" />
         if(image == 'laptop') return <img className="w-20" src={amari} alt="" />
@@ -45,7 +52,7 @@ export function Home() {
                     </div>
 
                     <div className="bg-[#39B7B5] w-full flex justify-center p-16 mt-8 mb-8 ">
-                        <button className="relative w-[20rem] h-[4rem] bg-[#e9521d]">
+                        <button className="relative w-[20rem] h-[4rem] bg-[#e9521d]" onClick={redirectToRegister}>
                             <p className="absolute top-3   left-14 text-3xl ">
                                 Registrate
                             </p>
