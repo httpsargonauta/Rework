@@ -31,7 +31,7 @@ export function Creatuperfil() {
               endIcon={input.endIcon}
             ></InputCustom>
           ))}
-          <button className="bg-[#75C5C3]" >Registrate</button>
+          <button className="bg-[#75C5C3]" >Guardar información</button>
         </form>
       </section>
       <Footer />
