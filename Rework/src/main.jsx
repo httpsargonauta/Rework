@@ -12,6 +12,7 @@ import { Presentacionem } from "./pages/PresentacionEmpleado/PresentacionEm";
 import { Perfilempresa } from "./pages/perfilempresa/perfilempresa";
 import { Perfilempleado } from "./pages/perfilempleado/perfilempleado";
 import { Encuentroempleados } from "./pages/Encuentroempleados/Encuentroempleados";
+import { PresentacionEmpresa } from "./pages/PresentacionEmpresa/PresentacionEmpresa";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/perfilempresa" element={<Perfilempresa />} />
       <Route path="/perfilempleado" element={<Perfilempleado />} />
       <Route path="/encuentroempleados" element={<Encuentroempleados />} />
+      <Route path="/presentacionEmpresa" element={<PresentacionEmpresa />} />
     </Routes>
   </Router>
 );
