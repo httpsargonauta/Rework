@@ -1,10 +1,9 @@
 .fixIcon{
-    width: 3rem !important;
-    height: 3rem !important;
-
-    background: white;
+    width: 5rem !important;
+    height: 5rem !important;
 }
 
 .menu-item{
+    
     border-bottom: 2px solid #29b7b4;
 }

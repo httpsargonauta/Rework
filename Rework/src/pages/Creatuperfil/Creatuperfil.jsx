@@ -6,7 +6,8 @@ import decora from "../../assets/Home/Recurso7.png"
 import { inputs } from "./creatuperfil.data";
 import { InputCustom } from "../../components/inputs/InputCustom";
 import { useFormik } from "formik";
-import { postDataApi } from "../../env/backend";
+import { postDataApi, putDataApi } from "../../env/backend";
+import { useEffect } from "react";
 
 export function Creatuperfil() {
   const getChange = (data, name) => {
@@ -25,12 +26,32 @@ export function Creatuperfil() {
     onSubmit: (values) => registerApi(values),
   });
 
+  const getProfile = () => {
+    const dataLocal = JSON.parse(localStorage.getItem('userData'));
+    const idUser = {idUser: dataLocal.idUser }
+    postDataApi('/user', idUser).then((response) => {
+      if(response){
+        formik.values.country = response.data.country;
+        formik.values.fullName = response.data.fullName;
+        formik.values.ocupation = response.data.ocupation;
+        formik.values.description = response.data.description;
+        formik.values.skills = response.data.skills;
+        formik.values.experience = response.data.experience;
+      }
+    })
+  }
+
   const registerApi = (data) => {
-    console.log(data);
-    // postDataApi('/auth /register', data).then((response) => {
-    //   console.log(response);
-    // })
+    const dataLocal = JSON.parse(localStorage.getItem('userData'));
+    data.idUser = dataLocal.idUser
+    putDataApi('/user', data).then((response) => {
+      console.log(response);
+    })
   };
+
+  useEffect(() => {
+    getProfile()
+  }, [])
 
   return (
     <>
