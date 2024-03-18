@@ -11,6 +11,7 @@ import phoneIcon from "../../assets/Registro-empresas/telefono-icon.svg"
 import emailIcon from "../../assets/Registro-empresas/correo-icon.svg"
 import enterpriseIcon from "../../assets/Registro-empresas/empresa-icon.svg"
 import eyeIcon from "../../assets/Registro-1/Ojo.svg";
+import lupaIcon from "../../assets/Ofertas-empleos/lupa-busador.svg";
 
 export {
     userIcon,
@@ -23,7 +24,8 @@ export {
     payIcon,
     clockIcon,
     phoneIcon,
-emailIcon,
-enterpriseIcon,
-eyeIcon
+    emailIcon,
+    enterpriseIcon,
+    eyeIcon,
+    lupaIcon
 }

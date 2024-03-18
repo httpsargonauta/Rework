@@ -12,7 +12,8 @@ import {
     phoneIcon,
     emailIcon,
     enterpriseIcon,
-    eyeIcon
+    eyeIcon,
+    lupaIcon
 } from "../icons/icons";
 import PropTypes from "prop-types";
 
@@ -25,7 +26,7 @@ export const InputCustom = ({
     firstIcon, 
     secondIcon, 
     startIcon, 
-    endIcon}) => {
+    endIcon,}) => {
     const [typeText, setTypeText] = useState("password");
 
     const changeIcon = () => {
@@ -46,6 +47,7 @@ export const InputCustom = ({
         if(img == 'phoneIcon') return <img src={phoneIcon} className="size-8"/>
         if(img == 'emailIcon') return <img src={emailIcon} className="size-8"/>
         if(img == 'enterpriseIcon') return <img src={enterpriseIcon} className="size-8"/>
+        if(img == 'lupaIcon') return <img src={lupaIcon} className="size-8"/>
         if(img == 'eyeIcon') return <img src={eyeIcon} className="size-8" onClick={changeIcon}/>
     }
 
