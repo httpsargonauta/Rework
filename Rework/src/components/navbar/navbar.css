@@ -4,6 +4,6 @@
 }
 
 .menu-item{
-    
+    display: block;
     border-bottom: 2px solid #29b7b4;
 }

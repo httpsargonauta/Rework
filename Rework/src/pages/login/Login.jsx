@@ -34,7 +34,7 @@ export const Login = () => {
       if(response.success == true){
         localStorage.setItem('userData', JSON.stringify(response.data))
         if(response.data.isEmploye == 'Empresa'){
-          navigate('/')
+          navigate('/presentacionEmpresa')
         } else {
           navigate('/Creatuperfil')
         }

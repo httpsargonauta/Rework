@@ -1,6 +1,6 @@
 import { slide as Menu } from 'react-burger-menu';
 import menuIcon from "../../assets/menuh/menuhamburguesa.svg";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './navbar.css'
 export const Navbar = () => {
   const navigate = useNavigate();
@@ -16,19 +16,19 @@ export const Navbar = () => {
       <div className="sm:hidden">
         <Menu className='w-10' right customBurgerIcon={<img src={menuIcon} alt="Menu hamburguesa" className='fixIcon'/>} >
           <div className="flex flex-col items-center justify-center h-screen w-full bg-white">
-            <p href="/" className="menu-item ">Inicio</p>
-            <p href="/about" className="menu-item">Servicios</p>
-            <p href="/login" className="menu-item">Iniciar Sesión</p>
-            <p href="/logout" className="menu-item">Cerrar Sesión</p>
+            <Link to={"/"} className="menu-item ">Inicio</Link>
+            <Link to={"/ofertas"} className="menu-item">Ofertas</Link>
+            <Link to={"/login"} className="menu-item">Iniciar Sesión</Link>
+            <Link to={"/"} className="menu-item">Cerrar Sesión</Link>
           </div>
         </Menu>
       </div>
       {/* Mostrar las opciones de menú convencionales en pantallas más grandes */}
       <div className="hidden sm:flex items-center justify-center space-x-12 pr-16">
-        <a href="/" className="text-black font-bold		 hover:text-gray-300">Inicio</a>
-        <a href="/about" className="text-black font-bold		 hover:text-gray-300">Servicios</a>
-        <a href="/login" className="text-black font-bold		 hover:text-gray-300">Iniciar Sesión</a>
-        <a href="/logout" className="text-black	font-bold	 hover:text-gray-300">Cerrar Sesión</a>
+            <Link to={"/"} className="ext-black font-bold		 hover:text-gray-300 ">Inicio</Link>
+            <Link to={"/ofertas"} className="ext-black font-bold		 hover:text-gray-300">Ofertas</Link>
+            <Link to={"/login"} className="ext-black font-bold		 hover:text-gray-300">Iniciar Sesión</Link>
+            <Link to={"/"} className="ext-black font-bold		 hover:text-gray-300">Cerrar Sesión</Link>
       </div>
     </nav>
   );

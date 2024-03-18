@@ -33,7 +33,7 @@ const redirectToRegister =() => {
                     <img className="w-72" src={Gordito} alt="" />
                     <h1>¡Bienvenidos!</h1>
                     <button>Profesionales en Remoto</button>
-                    <p className="w-3/4	mt-10 mb-10 text-center	 text-3xl">
+                    <p className="w-3/4 md:w-1/2	mt-10 mb-10 text-center	 text-3xl">
                     Rework es una plataforma avanzada que utiliza herramientas de IA para filtrar y seleccionar candidatos de manera automatizada, simplificando así el proceso de reclutamiento para las empresas. 
                     </p>
                     <div className="flex flex-col justify-center items-center gap-10">
