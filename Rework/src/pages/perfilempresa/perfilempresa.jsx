@@ -33,7 +33,7 @@ export function Perfilempresa() {
                     </p>
 
                     <InputCustom
-                        label={"searcg"}
+                        label={"search"}
                         placeholder={""}
                         type={"text"}
                         firstIcon={"lupaIcon"}
