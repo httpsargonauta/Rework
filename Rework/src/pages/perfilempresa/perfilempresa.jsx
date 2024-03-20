@@ -25,21 +25,23 @@ export function Perfilempresa() {
                 src={garabatoAzul}
                 alt=""
             />
-            <div className="flex justify-center mt-20">
-                <div className=" w-[460px] h-auto ">
-                    <h2>Encuentra ofertas para ti</h2>
-                    <p className="w-2/5 py-2 mt-10 mb-10 bg-[#F2A378] text-center rounded-lg	">
-                        Trabajos en remoto
-                    </p>
+            <div className="flex justify-center mt-10">
+                <div className=" w-[90%] h-auto ">
+                    <div className="flex flex-col">
+                        <h2>Encuentra ofertas para ti</h2>
+                        <p className="w-2/5 py-2 my-3 bg-[#F2A378] text-center rounded-lg	">
+                            Trabajos en remoto
+                        </p>
 
-                    <InputCustom
-                        label={"searcg"}
-                        placeholder={""}
-                        type={"text"}
-                        firstIcon={"lupaIcon"}
-                        startIcon={true}
-                        endIcon={false}
-                    ></InputCustom>
+                        <InputCustom
+                            label={"searcg"}
+                            placeholder={""}
+                            type={"text"}
+                            firstIcon={"lupaIcon"}
+                            startIcon={true}
+                            endIcon={false}
+                        ></InputCustom>
+                    </div>
 
                     <div className="flex mt-20 flex-col items-center justify-center gap-8">
                         {ofertas.map((off, index) => (
@@ -52,7 +54,7 @@ export function Perfilempresa() {
                                         {off.description}
                                     </p>
                                     <div className="flex gap-4 w-[20rem] overflow-x-hidden">
-                                        {off.skills.map((skil, color)=> (
+                                        {off.skills.map((skil, color) => (
                                             <p key={skil} className={setClass(color)}>
                                                 {skil}
                                             </p>
